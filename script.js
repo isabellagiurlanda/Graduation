@@ -1,0 +1,2 @@
+const menu=document.querySelector('.menu'),openBtn=document.querySelector('.menu-button'),closeBtn=document.querySelector('.close');
+if(menu&&openBtn&&closeBtn){const setMenu=o=>{menu.classList.toggle('open',o);menu.setAttribute('aria-hidden',String(!o));document.body.style.overflow=o?'hidden':''};openBtn.addEventListener('click',()=>setMenu(true));closeBtn.addEventListener('click',()=>setMenu(false));menu.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>setMenu(false)))}
